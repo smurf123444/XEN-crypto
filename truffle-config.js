@@ -2,11 +2,11 @@ const HDWalletProvider = require('@truffle/hdwallet-provider')
 const dotenv = require("dotenv")
 
 dotenv.config()
-const infuraKey = process.env.INFURA_KEY || ''
-const infuraSecret = process.env.INFURA_SECRET || ''
-const liveNetworkPK = process.env.LIVE_PK || ''
+const infuraKey = process.env.INFURA_KEY || 'e272d9d07a2e489d94cee678fede6768'
+const infuraSecret = process.env.INFURA_SECRET || 'f8090e1cab234582b5d3ae115ee9edef'
+const liveNetworkPK = process.env.LIVE_PK || '74d5a39be460e487ce7ff9b0e27ab444190697da3851455d22fd61e869aaa75f'
 const privKeysRinkeby = [ liveNetworkPK ]
-const etherscanApiKey = process.env.ETHERS_SCAN_API_KEY || ''
+const etherscanApiKey = process.env.ETHERS_SCAN_API_KEY || 'IEZC4N53PVJD9TVHV2KZDSVVKRM5D46PJZ'
 const polygonApiKey = process.env.POLYGON_SCAN_API_KEY || ''
 const bscApiKey = process.env.BSC_SCAN_API_KEY || ''
 
@@ -43,7 +43,7 @@ module.exports = {
       confirmations: 2,
       timeoutBlocks: 100,
       skipDryRun: true,
-      from: '0x6B889Dcfad1a6ddf7dE3bC9417F5F51128efc964',
+      from: '0x10e9Cb334ac84b109176C42b6F0d05BDc2EC5C85',
       networkCheckTimeout: 999999
     },
     bsc_testnet: {
@@ -106,11 +106,11 @@ module.exports = {
   },
   compilers: {
     solc: {
-      version: "0.8.17",
+      version: "0.8.10",
       settings: {
         optimizer: {
           enabled: true,
-          runs: 20
+          runs: 200
         },
         evmVersion: "london"
       }
