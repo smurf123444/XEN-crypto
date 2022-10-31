@@ -14,7 +14,7 @@ import "./IMerkleDistributor.sol";
 
 
 
-contract XENCrypto is Context, IRankedMintingToken, IStakingToken, IBurnableToken, ERC20("LEVIN Crypto", "LEV") {
+contract XENCrypto is Context, IRankedMintingToken, IStakingToken, IBurnableToken, ERC20("TRANCE TOKEN", "TRANCE") {
     using Math for uint256;
     using ABDKMath64x64 for int128;
     using ABDKMath64x64 for uint256;
