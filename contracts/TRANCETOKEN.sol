@@ -14,7 +14,7 @@ import "./IMerkleDistributor.sol";
 
 
 
-contract XENCrypto is Context, IRankedMintingToken, IStakingToken, IBurnableToken, ERC20("TRANCE TOKEN", "TRANCE") {
+contract TRANCECrytpo is Context, IRankedMintingToken, IStakingToken, IBurnableToken, ERC20("TRANCE TOKEN", "TRANCE") {
     using Math for uint256;
     using ABDKMath64x64 for int128;
     using ABDKMath64x64 for uint256;
@@ -76,13 +76,10 @@ contract XENCrypto is Context, IRankedMintingToken, IStakingToken, IBurnableToke
     uint256 public constant XEN_APY_START = 37;
     uint256 public constant XEN_APY_DAYS_STEP = 365;
     uint256 public constant XEN_APY_END = 15;
-/* 
-    string public constant AUTHORS = "@MrJackLevin @lbelyaev faircrypto.org";
- */
+
     // PUBLIC STATE, READABLE VIA NAMESAKE GETTERS
     bytes32 public immutable merkleRoot;
     uint256 public immutable genesisTs;
-    uint256 public globalRank = GENESIS_RANK;
     uint256 public activeMinters;
     uint256 public activeStakes;
     uint256 public totalXenStaked;
@@ -100,15 +97,6 @@ contract XENCrypto is Context, IRankedMintingToken, IStakingToken, IBurnableToke
     }
 
     // PRIVATE METHODS
-    /**
-     * @dev calculates Withdrawal Penalty depending on lateness
-     */
-
-
-    /**
-     * @dev calculates net Mint Reward (adjusted for Penalty)
-     */
-
 
     /**
      * @dev cleans up User Mint storage (gets some Gas credit;))
